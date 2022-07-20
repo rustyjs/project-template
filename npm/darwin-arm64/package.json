@@ -1,0 +1,26 @@
+{
+	"name": "@rustyjs/template-darwin-arm64",
+	"version": "0.0.1",
+	"os": [
+		"darwin"
+	],
+	"cpu": [
+		"arm64"
+	],
+	"main": "template.darwin-arm64.node",
+	"files": [
+		"template.darwin-arm64.node"
+	],
+	"description": "template",
+	"keywords": [
+		"napi",
+		"napi-rs",
+		"rust",
+		"bindings"
+	],
+	"license": "MIT",
+	"publishConfig": {
+		"access": "public"
+	},
+	"repository": "https://github.com/rustyjs/project-template.git"
+}

@@ -1,0 +1,26 @@
+{
+	"name": "@rustyjs/template-win32-x64-msvc",
+	"version": "0.0.1",
+	"os": [
+		"win32"
+	],
+	"cpu": [
+		"x64"
+	],
+	"main": "template.win32-x64-msvc.node",
+	"files": [
+		"template.win32-x64-msvc.node"
+	],
+	"description": "template",
+	"keywords": [
+		"napi",
+		"napi-rs",
+		"rust",
+		"bindings"
+	],
+	"license": "MIT",
+	"publishConfig": {
+		"access": "public"
+	},
+	"repository": "https://github.com/rustyjs/project-template.git"
+}

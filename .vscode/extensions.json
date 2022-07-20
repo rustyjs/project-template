@@ -1,0 +1,14 @@
+{
+    "recommendations": [
+        "ms-azuretools.vscode-docker",
+        "vadimcn.vscode-lldb",
+        "mutantdino.resourcemonitor",
+        "rust-lang.rust-analyzer",
+        "tamasfe.even-better-toml",
+        "serayuzgur.crates",
+        "bierner.github-markdown-preview",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "editorconfig.editorconfig"
+    ]
+}

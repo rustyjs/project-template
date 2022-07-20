@@ -1,0 +1,26 @@
+{
+	"name": "@rustyjs/template-linux-arm-gnueabihf",
+	"version": "0.0.1",
+	"os": [
+		"linux"
+	],
+	"cpu": [
+		"arm"
+	],
+	"main": "template.linux-arm-gnueabihf.node",
+	"files": [
+		"template.linux-arm-gnueabihf.node"
+	],
+	"description": "template",
+	"keywords": [
+		"napi",
+		"napi-rs",
+		"rust",
+		"bindings"
+	],
+	"license": "MIT",
+	"publishConfig": {
+		"access": "public"
+	},
+	"repository": "https://github.com/rustyjs/project-template.git"
+}

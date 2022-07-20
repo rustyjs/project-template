@@ -1,0 +1,26 @@
+{
+	"name": "@rustyjs/template-android-arm64",
+	"version": "0.0.1",
+	"os": [
+		"android"
+	],
+	"cpu": [
+		"arm64"
+	],
+	"main": "template.android-arm64.node",
+	"files": [
+		"template.android-arm64.node"
+	],
+	"description": "template",
+	"keywords": [
+		"napi",
+		"napi-rs",
+		"rust",
+		"bindings"
+	],
+	"license": "MIT",
+	"publishConfig": {
+		"access": "public"
+	},
+	"repository": "https://github.com/rustyjs/project-template.git"
+}

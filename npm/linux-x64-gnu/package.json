@@ -1,0 +1,26 @@
+{
+	"name": "@rustyjs/template-linux-x64-gnu",
+	"version": "0.0.1",
+	"os": [
+		"linux"
+	],
+	"cpu": [
+		"x64"
+	],
+	"main": "template.linux-x64-gnu.node",
+	"files": [
+		"template.linux-x64-gnu.node"
+	],
+	"description": "template",
+	"keywords": [
+		"napi",
+		"napi-rs",
+		"rust",
+		"bindings"
+	],
+	"license": "MIT",
+	"publishConfig": {
+		"access": "public"
+	},
+	"repository": "https://github.com/rustyjs/project-template.git"
+}

@@ -1,0 +1,9 @@
+/* eslint-disable */
+//prettier-ignore
+module.exports = {
+name: "@yarnpkg/plugin-script-lifecycles",
+factory: function (require) {
+var plugin=(()=>{var m=Object.create,o=Object.defineProperty;var P=Object.getOwnPropertyDescriptor;var S=Object.getOwnPropertyNames;var w=Object.getPrototypeOf,k=Object.prototype.hasOwnProperty;var b=t=>o(t,"__esModule",{value:!0});var E=t=>{if(typeof require!="undefined")return require(t);throw new Error('Dynamic require of "'+t+'" is not supported')};var L=(t,e)=>{for(var i in e)o(t,i,{get:e[i],enumerable:!0})},h=(t,e,i)=>{if(e&&typeof e=="object"||typeof e=="function")for(let r of S(e))!k.call(t,r)&&r!=="default"&&o(t,r,{get:()=>e[r],enumerable:!(i=P(e,r))||i.enumerable});return t},M=t=>h(b(o(t!=null?m(w(t)):{},"default",t&&t.__esModule&&"default"in t?{get:()=>t.default,enumerable:!0}:{value:t,enumerable:!0})),t);var H={};L(H,{default:()=>x});var c=M(E("@yarnpkg/core")),a={pre:"pre-",post:"post-"};async function W(t,e,i,r,n){let{configuration:y}=e,g=!y.get("userScriptLifecycleExcludes").get(r);return async()=>{let u=e.tryWorkspaceByLocator(i);if(u===null)return t();let p=u.manifest.scripts.get(r);if(typeof p=="undefined")return 1;async function l(s){let f=`${s}${r}`;return g&&await c.scriptUtils.hasPackageScript(i,f,{project:e})?await c.scriptUtils.executePackageScript(i,f,[],{cwd:n.cwd,project:e,stdin:n.stdin,stdout:n.stdout,stderr:n.stderr}):0}if(!r.startsWith(a.pre)){let s=await l(a.pre);if(s!==0)return s}let d=await(async()=>await c.scriptUtils.executePackageShellcode(i,p,n.args,{cwd:n.cwd,project:e,stdin:n.stdin,stdout:n.stdout,stderr:n.stderr}))();if(d!==0)return d;if(!r.startsWith(a.post)){let s=await l(a.post);if(s!==0)return s}return 0}}var v={hooks:{wrapScriptExecution:W},configuration:{userScriptLifecycleExcludes:{description:"",type:c.SettingsType.MAP,valueDefinition:{description:"",type:c.SettingsType.BOOLEAN}}}},x=v;return H;})();
+return plugin;
+}
+};

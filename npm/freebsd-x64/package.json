@@ -1,0 +1,26 @@
+{
+	"name": "@rustyjs/template-freebsd-x64",
+	"version": "0.0.1",
+	"os": [
+		"freebsd"
+	],
+	"cpu": [
+		"x64"
+	],
+	"main": "template.freebsd-x64.node",
+	"files": [
+		"template.freebsd-x64.node"
+	],
+	"description": "template",
+	"keywords": [
+		"napi",
+		"napi-rs",
+		"rust",
+		"bindings"
+	],
+	"license": "MIT",
+	"publishConfig": {
+		"access": "public"
+	},
+	"repository": "https://github.com/rustyjs/project-template.git"
+}
