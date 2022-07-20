@@ -49,7 +49,7 @@
 		"@types/prettier": "^2",
 		"@typescript-eslint/eslint-plugin": "^5.30.7",
 		"@typescript-eslint/parser": "^5.30.7",
-		"c8": "^7.11.3",
+		"c8": "^7.12.0",
 		"eslint": "^8.20.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-prettier": "^4.2.1",
@@ -78,7 +78,7 @@
 	],
 	"engines": {
 		"node": ">=v16.16.0",
-		"npm": ">=7.0.0"
+		"npm": ">=7.24.2"
 	},
 	"bugs": {
 		"url": "https://github.com/rustyjs/project-template/issues"
