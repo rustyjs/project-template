@@ -17,7 +17,7 @@
 		"test:rust": "cargo test",
 		"test:bun": "bun run test:node",
 		"fmt": "run-p \"fmt:**\"",
-		"fmt:node": "prettier -w .github npm tests .cargo index.cjs index.mjs index.d.ts README.md Cargo.toml",
+		"fmt:node": "prettier -w .",
 		"fmt:rust": "cargo +nightly fmt",
 		"update": "yarn upgrade-interactive",
 		"build": "napi build --platform --release --js false",

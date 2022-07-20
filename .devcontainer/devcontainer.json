@@ -4,7 +4,7 @@
 	"runArgs": ["--init"],
 	"mounts": ["source=/var/run/docker.sock,target=/var/run/docker-host.sock,type=bind"],
 	"overrideCommand": false,
-	
+
 	// Use this environment variable if you need to bind mount your local source code into a new container.
 	"remoteEnv": {
 		"LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}"
@@ -13,8 +13,8 @@
 	// Configure tool-specific properties.
 	"customizations": {
 		// Configure properties specific to VS Code.
-		"vscode": {	
-            "settings": { 
+		"vscode": {
+			"settings": {
 				"lldb.executable": "/usr/bin/lldb",
 				// VS Code don't watch files under ./target
 				"files.watcherExclude": {
@@ -26,19 +26,19 @@
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"ms-azuretools.vscode-docker",
-                "vadimcn.vscode-lldb",
+				"vadimcn.vscode-lldb",
 				"mutantdino.resourcemonitor",
 				"rust-lang.rust-analyzer",
 				"tamasfe.even-better-toml",
 				"serayuzgur.crates",
-                "bierner.github-markdown-preview",
-                "dbaeumer.vscode-eslint",
-                "esbenp.prettier-vscode",
+				"bierner.github-markdown-preview",
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode",
 				"editorconfig.editorconfig"
 			]
 		}
 	},
-	
+
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
