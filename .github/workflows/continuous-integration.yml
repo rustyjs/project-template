@@ -100,8 +100,11 @@ jobs:
       - name: Setup bun
         uses: antongolub/action-setup-bun@v1
 
+      - name: Install Dependencies
+        run: bun install
+
       - name: Test
-        
+        run: bun run test:bun
 
   rustfmt:
     name: Rustfmt
