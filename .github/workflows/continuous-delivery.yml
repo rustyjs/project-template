@@ -266,17 +266,17 @@ jobs:
           - '18'
     runs-on: ${{ matrix.settings.host }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3
 
       - name: Setup node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@2fddd8803e2f5c9604345a0b591c3020ee971a93 # tag=v3
         with:
           node-version: ${{ matrix.node }}
           check-latest: true
           cache: yarn
 
       - name: Cache NPM dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@0865c47f36e68161719c5b124609996bb5c40129 # tag=v3
         with:
           path: .yarn/cache
           key: npm-cache-test-${{ matrix.settings.target }}-${{ matrix.node }}
@@ -285,7 +285,7 @@ jobs:
         run: yarn install
 
       - name: Download artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@fb598a63ae348fa914e94cd0ff38f362e927b741 # tag=v3
         with:
           name: bindings-${{ matrix.settings.target }}
           path: .
@@ -310,17 +310,17 @@ jobs:
           - '18'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3
 
       - name: Setup node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@2fddd8803e2f5c9604345a0b591c3020ee971a93 # tag=v3
         with:
           node-version: ${{ matrix.node }}
           check-latest: true
           cache: yarn
 
       - name: Cache NPM dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@0865c47f36e68161719c5b124609996bb5c40129 # tag=v3
         with:
           path: .yarn/cache
           key: npm-cache-test-linux-x64-gnu-${{ matrix.node }}
@@ -329,7 +329,7 @@ jobs:
         run: yarn install
 
       - name: Download artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@fb598a63ae348fa914e94cd0ff38f362e927b741 # tag=v3
         with:
           name: bindings-x86_64-unknown-linux-gnu
           path: .
@@ -354,17 +354,17 @@ jobs:
           - '18'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3
 
       - name: Setup node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@2fddd8803e2f5c9604345a0b591c3020ee971a93 # tag=v3
         with:
           node-version: ${{ matrix.node }}
           check-latest: true
           cache: yarn
 
       - name: Cache NPM dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@0865c47f36e68161719c5b124609996bb5c40129 # tag=v3
         with:
           path: .yarn/cache
           key: npm-cache-test-x86_64-unknown-linux-musl-${{ matrix.node }}
@@ -375,7 +375,7 @@ jobs:
           yarn install
 
       - name: Download artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@fb598a63ae348fa914e94cd0ff38f362e927b741 # tag=v3
         with:
           name: bindings-x86_64-unknown-linux-musl
           path: .
@@ -402,10 +402,10 @@ jobs:
     steps:
       - run: docker run --rm --privileged multiarch/qemu-user-static:register --reset
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3
 
       - name: Download artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@fb598a63ae348fa914e94cd0ff38f362e927b741 # tag=v3
         with:
           name: bindings-aarch64-unknown-linux-gnu
           path: .
@@ -415,7 +415,7 @@ jobs:
         shell: bash
 
       - name: Cache NPM dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@0865c47f36e68161719c5b124609996bb5c40129 # tag=v3
         with:
           path: .yarn/cache
           key: npm-cache-test-linux-aarch64-gnu-${{ matrix.node }}
@@ -427,7 +427,7 @@ jobs:
           yarn install
 
       - name: Setup and run tests
-        uses: addnab/docker-run-action@v3
+        uses: addnab/docker-run-action@4f65fabd2431ebc8d299f8e5a018d79a769ae185 # tag=v3
         with:
           image: ghcr.io/napi-rs/napi-rs/nodejs:aarch64-${{ matrix.node }}
           options: '-v ${{ github.workspace }}:/build -w /build'
@@ -444,10 +444,10 @@ jobs:
     steps:
       - run: docker run --rm --privileged multiarch/qemu-user-static:register --reset
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3
 
       - name: Download artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@fb598a63ae348fa914e94cd0ff38f362e927b741 # tag=v3
         with:
           name: bindings-aarch64-unknown-linux-musl
           path: .
@@ -456,7 +456,7 @@ jobs:
         shell: bash
 
       - name: Cache NPM dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@0865c47f36e68161719c5b124609996bb5c40129 # tag=v3
         with:
           path: .yarn/cache
           key: npm-cache-test-linux-aarch64-musl-${{ matrix.node }}
@@ -468,7 +468,7 @@ jobs:
           yarn install
 
       - name: Setup and run tests
-        uses: addnab/docker-run-action@v3
+        uses: addnab/docker-run-action@4f65fabd2431ebc8d299f8e5a018d79a769ae185 # tag=v3
         with:
           image: multiarch/alpine:aarch64-latest-stable
           options: '-v ${{ github.workspace }}:/build -w /build'
@@ -492,9 +492,9 @@ jobs:
     steps:
       - run: docker run --rm --privileged multiarch/qemu-user-static:register --reset
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3
       - name: Download artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@fb598a63ae348fa914e94cd0ff38f362e927b741 # tag=v3
         with:
           name: bindings-armv7-unknown-linux-gnueabihf
 
@@ -504,7 +504,7 @@ jobs:
         shell: bash
 
       - name: Cache NPM dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@0865c47f36e68161719c5b124609996bb5c40129 # tag=v3
         with:
           path: .yarn/cache
           key: npm-cache-test-linux-arm-gnueabihf-${{ matrix.node }}
@@ -515,7 +515,7 @@ jobs:
           yarn install
 
       - name: Setup and run tests
-        uses: addnab/docker-run-action@v3
+        uses: addnab/docker-run-action@4f65fabd2431ebc8d299f8e5a018d79a769ae185 # tag=v3
         with:
           image: ghcr.io/napi-rs/napi-rs/nodejs:armhf-${{ matrix.node }}
           options: '-v ${{ github.workspace }}:/build -w /build'
