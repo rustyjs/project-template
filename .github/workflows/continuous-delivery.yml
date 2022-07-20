@@ -17,7 +17,7 @@ jobs:
     name: Release Please
     runs-on: ubuntu-latest
     permissions: write-all
-    if: github.repository == 'devtomio/project-template'
+    if: github.repository == 'rustyjs/project-template'
 
     outputs:
       release_created: ${{ steps.release.outputs.release_created }}
