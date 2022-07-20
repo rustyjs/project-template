@@ -542,6 +542,17 @@ jobs:
           check-latest: true
           cache: yarn
 
+      - name: Install rust
+        uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          override: true
+          toolchain: nightly
+          target: ${{ matrix.settings.target }}
+
+      - name: Install rustfmt
+        run: rustup component add rustfmt
+
       - name: Cache NPM dependencies
         uses: actions/cache@0865c47f36e68161719c5b124609996bb5c40129 # tag=v3
         with:
