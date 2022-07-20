@@ -7,8 +7,8 @@
 **Project template to be used for rustyjs repositories.**
 
 [![GitHub](https://img.shields.io/github/license/rustyjs/project-template)](https://github.com/rustyjs/project-template/blob/main/LICENSE.md)
-[![Continuous Delivery](https://github.com/rustyjs/template/actions/workflows/continuous-delivery.yml/badge.svg)](https://github.com/rustyjs/template/actions/workflows/continuous-delivery.yml)
-[![Continuous Integration](https://github.com/rustyjs/template/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/rustyjs/template/actions/workflows/continuous-integration.yml)
+[![Continuous Delivery](https://github.com/rustyjs/project-template/actions/workflows/continuous-delivery.yml/badge.svg)](https://github.com/rustyjs/project-template/actions/workflows/continuous-delivery.yml)
+[![Continuous Integration](https://github.com/rustyjs/project-template/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/rustyjs/project-template/actions/workflows/continuous-integration.yml)
 [![npm](https://img.shields.io/npm/v/@rustyjs/template?color=crimson&logo=npm&style=flat-square)](https://www.npmjs.com/package/@rustyjs/template)
 
 **Packages**
