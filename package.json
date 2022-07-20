@@ -9,8 +9,8 @@
 	"license": "MIT",
 	"packageManager": "yarn@3.2.1",
 	"scripts": {
-		"lint": "eslint lib tests --ext ts --fix",
-		"format": "prettier --write {lib,tests}/**/*.ts",
+		"lint": "eslint tests --ext ts --fix",
+		"format": "prettier --write tests/**/*.ts",
 		"docs": "typedoc",
 		"test": "run-p \"test:**\"",
 		"test:node": "jest",
