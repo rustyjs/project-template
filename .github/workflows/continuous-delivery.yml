@@ -1,9 +1,8 @@
 name: Continuous Delivery
 env:
   DEBUG: napi:*
-  APP_NAME: sodium
+  APP_NAME: template
   MACOSX_DEPLOYMENT_TARGET: '10.13'
-  SODIUM_DISABLE_PIE: 1
 
 on:
   push:
@@ -18,7 +17,7 @@ jobs:
     name: Release Please
     runs-on: ubuntu-latest
     permissions: write-all
-    if: github.repository == 'devtomio/sodium'
+    if: github.repository == 'devtomio/project-template'
 
     outputs:
       release_created: ${{ steps.release.outputs.release_created }}
