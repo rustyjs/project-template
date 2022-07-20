@@ -13,7 +13,7 @@
 		"format": "prettier --write {lib,tests}/**/*.ts",
 		"docs": "typedoc",
 		"test": "run-p \"test:**\"",
-		"test:node": "vitest run",
+		"test:node": "jest",
 		"test:rust": "cargo test",
 		"test:bun": "bun run test:node",
 		"fmt": "run-p \"fmt:**\"",
@@ -45,22 +45,23 @@
 		"@sapphire/prettier-config": "^1.4.3",
 		"@sapphire/ts-config": "^3.3.4",
 		"@types/eslint": "^8",
+		"@types/jest": "^28.1.6",
 		"@types/node": "^18.0.6",
 		"@types/prettier": "^2",
 		"@typescript-eslint/eslint-plugin": "^5.30.7",
 		"@typescript-eslint/parser": "^5.30.7",
-		"c8": "^7.12.0",
 		"eslint": "^8.20.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-prettier": "^4.2.1",
 		"gen-esm-wrapper": "^1.1.3",
+		"jest": "^28.1.3",
 		"npm-run-all": "^4.1.5",
 		"prettier": "^2.7.1",
 		"prettier-plugin-toml": "^0.3.1",
+		"ts-jest": "^28.0.7",
 		"typedoc": "^0.23.8",
 		"typedoc-plugin-mdn-links": "^2.0.0",
-		"typescript": "^4.7.4",
-		"vitest": "^0.18.1"
+		"typescript": "^4.7.4"
 	},
 	"repository": {
 		"type": "git",
@@ -77,8 +78,8 @@
 		"bindings"
 	],
 	"engines": {
-		"node": ">=v16.16.0",
-		"npm": ">=7.24.2"
+		"node": ">=14",
+		"npm": ">=7"
 	},
 	"bugs": {
 		"url": "https://github.com/rustyjs/project-template/issues"
