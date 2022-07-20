@@ -14,4 +14,3 @@ match_arm_blocks = true
 normalize_comments = true
 overflow_delimited_expr = true
 struct_lit_single_line = false
-width_heuristics = "Max"
