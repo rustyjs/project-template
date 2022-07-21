@@ -1,2 +1,3 @@
 * text eol=lf
 *.sh linguist-vendored
+*Dockerfile* linguist-vendored
