@@ -68,8 +68,9 @@
 		"url": "git+https://github.com/rustyjs/project-template.git"
 	},
 	"files": [
-		"dist",
-		"!dist/*.tsbuildinfo"
+		"index.cjs",
+		"index.mjs",
+		"index.d.ts"
 	],
 	"keywords": [
 		"napi",
