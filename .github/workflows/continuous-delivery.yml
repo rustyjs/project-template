@@ -121,10 +121,10 @@ jobs:
     runs-on: ${{ matrix.settings.host }}
     needs: release_please
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3
 
       - name: Setup node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@2fddd8803e2f5c9604345a0b591c3020ee971a93 # tag=v3
         if: ${{ !matrix.settings.docker }}
         with:
           node-version: 16
@@ -132,7 +132,7 @@ jobs:
           cache: yarn
 
       - name: Install
-        uses: actions-rs/toolchain@v1
+        uses: actions-rs/toolchain@16499b5e05bf2e26879000db0c1d13f7e13fa3af # tag=v1
         if: ${{ !matrix.settings.docker }}
         with:
           profile: minimal
@@ -141,7 +141,7 @@ jobs:
           target: ${{ matrix.settings.target }}
 
       - name: Cache cargo
-        uses: actions/cache@v3
+        uses: actions/cache@0865c47f36e68161719c5b124609996bb5c40129 # tag=v3
         with:
           path: |
             ~/.cargo/registry/index/
@@ -154,7 +154,7 @@ jobs:
           key: ${{ matrix.settings.target }}-cargo-registry
 
       - name: Cache NPM dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@0865c47f36e68161719c5b124609996bb5c40129 # tag=v3
         with:
           path: .yarn/cache
           key: npm-cache-build-${{ matrix.settings.target }}-node@16
@@ -168,7 +168,7 @@ jobs:
         run: yarn install
 
       - name: Build in docker
-        uses: addnab/docker-run-action@v3
+        uses: addnab/docker-run-action@4f65fabd2431ebc8d299f8e5a018d79a769ae185 # tag=v3
         if: ${{ matrix.settings.docker }}
         with:
           image: ${{ matrix.settings.docker }}
@@ -181,7 +181,7 @@ jobs:
         shell: bash
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@3cea5372237819ed00197afe530f5a7ea3e805c8 # tag=v3
         with:
           name: bindings-${{ matrix.settings.target }}
           path: ${{ env.APP_NAME }}.*.node
@@ -543,7 +543,7 @@ jobs:
           cache: yarn
 
       - name: Install rust
-        uses: actions-rs/toolchain@v1
+        uses: actions-rs/toolchain@16499b5e05bf2e26879000db0c1d13f7e13fa3af # tag=v1
         with:
           profile: minimal
           override: true
