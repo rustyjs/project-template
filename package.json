@@ -7,7 +7,7 @@
 	"module": "index.mjs",
 	"author": "@rustyjs",
 	"license": "MIT",
-	"packageManager": "yarn@3.2.1",
+	"packageManager": "yarn@3.2.2",
 	"scripts": {
 		"lint": "eslint tests --ext ts --fix",
 		"format": "prettier --write tests/**/*.ts",
