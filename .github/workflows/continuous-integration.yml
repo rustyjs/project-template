@@ -90,7 +90,7 @@ jobs:
         run: rustup toolchain install nightly && rustup component add rustfmt --toolchain nightly
 
       - name: Setup node
-        uses: actions/setup-node@eeb10cff27034e7acf239c5d29f62154018672fd # tag=v3
+        uses: actions/setup-node@2fddd8803e2f5c9604345a0b591c3020ee971a93 # tag=v3
         with:
           node-version: ${{ matrix.node }}
 
@@ -215,7 +215,7 @@ jobs:
           ref: ${{ github.head_ref }}
 
       - name: Setup node
-        uses: actions/setup-node@eeb10cff27034e7acf239c5d29f62154018672fd # tag=v3
+        uses: actions/setup-node@2fddd8803e2f5c9604345a0b591c3020ee971a93 # tag=v3
         with:
           node-version: 16
 
