@@ -118,7 +118,7 @@ jobs:
           override: true
 
       - name: Setup bun
-        uses: antongolub/action-setup-bun@d11a969c9a0a7bc458f3b9fffb0423003dd90d23 # tag=v1
+        uses: antongolub/action-setup-bun@6f7d39df83d8e2d83f8f885b1bf07d32b3807e69 # tag=v1
 
       - name: Install Dependencies
         run: bun install
