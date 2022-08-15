@@ -49,11 +49,11 @@ jobs:
           - host: macos-latest
             target: x86_64-apple-darwin
             build: |
-              yarn napi build --platform --release --js false
+              yarn napi build --platform --release --js index.cjs
               strip -x *.node
 
           - host: windows-latest
-            build: yarn napi build --platform --release --js false
+            build: yarn napi build --platform --release --js index.cjs
             target: x86_64-pc-windows-msvc
 
           - host: ubuntu-latest
@@ -61,13 +61,13 @@ jobs:
             docker: ghcr.io/napi-rs/napi-rs/nodejs-rust:lts-debian
             build: |-
               set -e &&
-              yarn napi build --platform --release --js false --target x86_64-unknown-linux-gnu &&
+              yarn napi build --platform --release --js index.cjs --target x86_64-unknown-linux-gnu &&
               strip *.node
 
           - host: ubuntu-latest
             target: x86_64-unknown-linux-musl
             docker: ghcr.io/napi-rs/napi-rs/nodejs-rust:lts-alpine
-            build: set -e && yarn napi build --platform --release --js false && strip *.node
+            build: set -e && yarn napi build --platform --release --js index.cjs && strip *.node
 
           - host: macos-latest
             target: aarch64-apple-darwin
@@ -77,7 +77,7 @@ jobs:
               export CXX=$(xcrun -f clang++);
               SYSROOT=$(xcrun --sdk macosx --show-sdk-path);
               export CFLAGS="-isysroot $SYSROOT -isystem $SYSROOT";
-              yarn napi build --platform --release --js false --target aarch64-apple-darwin
+              yarn napi build --platform --release --js index.cjs --target aarch64-apple-darwin
               strip -x *.node
 
           - host: ubuntu-latest
@@ -85,7 +85,7 @@ jobs:
             docker: ghcr.io/napi-rs/napi-rs/nodejs-rust:lts-debian-aarch64
             build: |-
               set -e &&
-              yarn napi build --platform --release --js false --target aarch64-unknown-linux-gnu &&
+              yarn napi build --platform --release --js index.cjs --target aarch64-unknown-linux-gnu &&
               aarch64-unknown-linux-gnu-strip *.node
 
           - host: ubuntu-latest
@@ -96,7 +96,7 @@ jobs:
               export CXX="${ANDROID_NDK_LATEST_HOME}/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android24-clang++"
               export AR="${ANDROID_NDK_LATEST_HOME}/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-ar"
               export PATH="${ANDROID_NDK_LATEST_HOME}/toolchains/llvm/prebuilt/linux-x86_64/bin:${PATH}"
-              yarn napi build --platform --release --js false --target aarch64-linux-android
+              yarn napi build --platform --release --js index.cjs --target aarch64-linux-android
               ${ANDROID_NDK_LATEST_HOME}/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-strip *.node
 
           - host: ubuntu-latest
@@ -105,7 +105,7 @@ jobs:
             build: |-
               set -e &&
               rustup target add aarch64-unknown-linux-musl &&
-              yarn napi build --platform --release --js false --target aarch64-unknown-linux-musl &&
+              yarn napi build --platform --release --js index.cjs --target aarch64-unknown-linux-musl &&
               /aarch64-linux-musl-cross/bin/aarch64-linux-musl-strip *.node
 
           - host: ubuntu-latest
@@ -114,7 +114,7 @@ jobs:
               sudo apt-get update
               sudo apt-get install gcc-arm-linux-gnueabihf g++-arm-linux-gnueabihf -y
             build: |
-              yarn napi build --platform --release --js false --target=armv7-unknown-linux-gnueabihf
+              yarn napi build --platform --release --js index.cjs --target=armv7-unknown-linux-gnueabihf
               arm-linux-gnueabihf-strip *.node
 
     name: Stable - ${{ matrix.settings.target }} - node@16
@@ -228,7 +228,7 @@ jobs:
             env
             freebsd-version
             yarn install --immutable
-            yarn napi build --platform --release --js false
+            yarn napi build --platform --release --js index.cjs
             strip -x *.node
             yarn test
             rm -rf node_modules
