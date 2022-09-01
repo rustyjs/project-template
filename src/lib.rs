@@ -7,12 +7,9 @@
     clippy::unused_self,
     // Allowed as they are too pedantic.
     clippy::cast_possible_truncation,
-    clippy::unreadable_literal,
-    clippy::cast_possible_wrap,
     clippy::wildcard_imports,
     clippy::cast_sign_loss,
     clippy::too_many_lines,
-    clippy::doc_markdown,
     clippy::cast_lossless,
     clippy::must_use_candidate
 )]
