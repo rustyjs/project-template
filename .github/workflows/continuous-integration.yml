@@ -56,7 +56,7 @@ jobs:
         run: echo "::add-matcher::.github/problemMatchers/rust.json"
 
       - name: Cache dependencies
-        uses: Swatinem/rust-cache@b5ec9edd911d3bf82c74038b0a28791e0aa24d6f # tag=v2
+        uses: Swatinem/rust-cache@359a70e43a0bb8a13953b04a90f76428b4959bb6 # v2
 
       - name: Install Nextest
         uses: taiki-e/install-action@nextest
@@ -147,7 +147,7 @@ jobs:
         run: echo "::add-matcher::.github/problemMatchers/rust.json"
 
       - name: Cache dependencies
-        uses: Swatinem/rust-cache@b5ec9edd911d3bf82c74038b0a28791e0aa24d6f # tag=v2
+        uses: Swatinem/rust-cache@359a70e43a0bb8a13953b04a90f76428b4959bb6 # v2
 
       - name: Install rustfmt
         run: rustup component add rustfmt
@@ -176,7 +176,7 @@ jobs:
         run: echo "::add-matcher::.github/problemMatchers/rust.json"
 
       - name: Cache dependencies
-        uses: Swatinem/rust-cache@b5ec9edd911d3bf82c74038b0a28791e0aa24d6f # tag=v2
+        uses: Swatinem/rust-cache@359a70e43a0bb8a13953b04a90f76428b4959bb6 # v2
 
       - name: Install clippy
         run: rustup component add clippy
