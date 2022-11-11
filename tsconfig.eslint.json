@@ -7,5 +7,5 @@
 		"allowJs": true,
 		"checkJs": true
 	},
-	"include": ["tests", "scripts", "jest.config.mjs", "index.cjs", "index.mjs", "index.d.ts"]
+	"include": ["tests", "scripts", "vitest.config.ts", "index.cjs", "index.mjs", "index.d.ts"]
 }

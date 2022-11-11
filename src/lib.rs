@@ -26,8 +26,8 @@ extern crate napi_derive;
 
 /// Returns "world".
 #[napi]
-pub fn hello() -> String {
-    String::from("world")
+pub fn hello() -> &'static str {
+    "world"
 }
 
 #[cfg(test)]
@@ -36,6 +36,6 @@ mod test {
     fn hello() {
         let result = super::hello();
 
-        assert_eq!("world", &result);
+        assert_eq!("world", result);
     }
 }
