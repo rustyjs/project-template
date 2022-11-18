@@ -7,7 +7,7 @@
 	"module": "index.mjs",
 	"author": "@rustyjs",
 	"license": "MIT",
-	"packageManager": "yarn@3.2.4",
+	"packageManager": "yarn@3.3.0",
 	"scripts": {
 		"lint": "eslint tests --ext ts --fix",
 		"format": "prettier --write tests/**/*.ts",
@@ -40,15 +40,15 @@
 	},
 	"devDependencies": {
 		"@jjwesterkamp/typedoc-theme": "^1.2.0",
-		"@napi-rs/cli": "^2.12.0",
+		"@napi-rs/cli": "^2.12.1",
 		"@sapphire/eslint-config": "^4.3.8",
 		"@sapphire/prettier-config": "^1.4.4",
 		"@sapphire/ts-config": "^3.3.4",
 		"@types/eslint": "^8",
 		"@types/node": "^18.11.9",
 		"@types/prettier": "^2",
-		"@typescript-eslint/eslint-plugin": "^5.42.1",
-		"@typescript-eslint/parser": "^5.42.1",
+		"@typescript-eslint/eslint-plugin": "^5.43.0",
+		"@typescript-eslint/parser": "^5.43.0",
 		"eslint": "^8.27.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-prettier": "^4.2.1",
@@ -56,11 +56,11 @@
 		"npm-run-all": "^4.1.5",
 		"prettier": "^2.7.1",
 		"prettier-plugin-toml": "^0.3.1",
-		"typedoc": "^0.23.20",
+		"typedoc": "^0.23.21",
 		"typedoc-plugin-mdn-links": "^2.0.0",
-		"typescript": "^4.8.4",
-		"vite": "^3.2.3",
-		"vitest": "^0.25.1"
+		"typescript": "^4.9.3",
+		"vite": "^3.2.4",
+		"vitest": "^0.25.2"
 	},
 	"repository": {
 		"type": "git",
