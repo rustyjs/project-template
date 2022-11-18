@@ -21,7 +21,9 @@
 		"fmt:rust": "cargo +nightly fmt",
 		"update": "yarn upgrade-interactive",
 		"build": "napi build --platform --release --js index.cjs",
-		"post-build": "gen-esm-wrapper index.cjs index.mjs && yarn fmt"
+		"post-build": "gen-esm-wrapper index.cjs index.mjs && yarn fmt",
+		"artifacts": "napi artifacts",
+		"prepublishOnly": "napi prepublish -t npm"
 	},
 	"napi": {
 		"name": "template",
