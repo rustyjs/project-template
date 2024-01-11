@@ -142,7 +142,7 @@ jobs:
           target: ${{ matrix.settings.target }}
 
       - name: Cache cargo
-        uses: actions/cache@9b0c1fce7a93df8e3bb8926b0d6e9d89e92f20a7 # v3
+        uses: actions/cache@e12d46a63a90f2fae62d114769bbf2a179198b5c # v3
         with:
           path: |
             ~/.cargo/registry/index/
@@ -155,7 +155,7 @@ jobs:
           key: ${{ matrix.settings.target }}-cargo-registry
 
       - name: Cache NPM dependencies
-        uses: actions/cache@9b0c1fce7a93df8e3bb8926b0d6e9d89e92f20a7 # v3
+        uses: actions/cache@e12d46a63a90f2fae62d114769bbf2a179198b5c # v3
         with:
           path: .yarn/cache
           key: npm-cache-build-${{ matrix.settings.target }}-node@16
@@ -271,7 +271,7 @@ jobs:
           cache: yarn
 
       - name: Cache NPM dependencies
-        uses: actions/cache@9b0c1fce7a93df8e3bb8926b0d6e9d89e92f20a7 # v3
+        uses: actions/cache@e12d46a63a90f2fae62d114769bbf2a179198b5c # v3
         with:
           path: .yarn/cache
           key: npm-cache-test-${{ matrix.settings.target }}-${{ matrix.node }}
@@ -315,7 +315,7 @@ jobs:
           cache: yarn
 
       - name: Cache NPM dependencies
-        uses: actions/cache@9b0c1fce7a93df8e3bb8926b0d6e9d89e92f20a7 # v3
+        uses: actions/cache@e12d46a63a90f2fae62d114769bbf2a179198b5c # v3
         with:
           path: .yarn/cache
           key: npm-cache-test-linux-x64-gnu-${{ matrix.node }}
@@ -359,7 +359,7 @@ jobs:
           cache: yarn
 
       - name: Cache NPM dependencies
-        uses: actions/cache@9b0c1fce7a93df8e3bb8926b0d6e9d89e92f20a7 # v3
+        uses: actions/cache@e12d46a63a90f2fae62d114769bbf2a179198b5c # v3
         with:
           path: .yarn/cache
           key: npm-cache-test-x86_64-unknown-linux-musl-${{ matrix.node }}
@@ -410,7 +410,7 @@ jobs:
         shell: bash
 
       - name: Cache NPM dependencies
-        uses: actions/cache@9b0c1fce7a93df8e3bb8926b0d6e9d89e92f20a7 # v3
+        uses: actions/cache@e12d46a63a90f2fae62d114769bbf2a179198b5c # v3
         with:
           path: .yarn/cache
           key: npm-cache-test-linux-aarch64-gnu-${{ matrix.node }}
@@ -451,7 +451,7 @@ jobs:
         shell: bash
 
       - name: Cache NPM dependencies
-        uses: actions/cache@9b0c1fce7a93df8e3bb8926b0d6e9d89e92f20a7 # v3
+        uses: actions/cache@e12d46a63a90f2fae62d114769bbf2a179198b5c # v3
         with:
           path: .yarn/cache
           key: npm-cache-test-linux-aarch64-musl-${{ matrix.node }}
@@ -499,7 +499,7 @@ jobs:
         shell: bash
 
       - name: Cache NPM dependencies
-        uses: actions/cache@9b0c1fce7a93df8e3bb8926b0d6e9d89e92f20a7 # v3
+        uses: actions/cache@e12d46a63a90f2fae62d114769bbf2a179198b5c # v3
         with:
           path: .yarn/cache
           key: npm-cache-test-linux-arm-gnueabihf-${{ matrix.node }}
@@ -556,7 +556,7 @@ jobs:
         run: rustup component add rustfmt
 
       - name: Cache NPM dependencies
-        uses: actions/cache@9b0c1fce7a93df8e3bb8926b0d6e9d89e92f20a7 # v3
+        uses: actions/cache@e12d46a63a90f2fae62d114769bbf2a179198b5c # v3
         with:
           path: node_modules
           key: npm-cache-ubuntu-latest-${{ hashFiles('yarn.lock') }}
