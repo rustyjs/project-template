@@ -41,7 +41,7 @@
 	"devDependencies": {
 		"@jjwesterkamp/typedoc-theme": "^1.2.0",
 		"@napi-rs/cli": "^2.12.1",
-		"@sapphire/eslint-config": "^4.3.8",
+		"@sapphire/eslint-config": "^5.0.5",
 		"@sapphire/prettier-config": "^1.4.4",
 		"@sapphire/ts-config": "^3.3.4",
 		"@types/eslint": "^8",
