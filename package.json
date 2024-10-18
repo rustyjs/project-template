@@ -1,6 +1,6 @@
 {
 	"name": "@rustyjs/template",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"description": "template",
 	"main": "index.cjs",
 	"types": "index.d.ts",
