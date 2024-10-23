@@ -25,7 +25,7 @@ jobs:
 
     steps:
       - name: Checkout the Repository
-        uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # tag=v3
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
 
       - name: Install jq
         run: sudo apt-get install -y jq
@@ -122,7 +122,7 @@ jobs:
     runs-on: ${{ matrix.settings.host }}
     needs: release_please
     steps:
-      - uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # tag=v3
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
 
       - name: Setup node
         uses: actions/setup-node@8c91899e586c5b171469028077307d293428b516 # tag=v3
@@ -194,7 +194,7 @@ jobs:
     name: Build FreeBSD
     steps:
       - name: Checkout repository
-        uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # tag=v3
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
 
       - name: Build
         id: build
@@ -261,7 +261,7 @@ jobs:
           - '18'
     runs-on: ${{ matrix.settings.host }}
     steps:
-      - uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # tag=v3
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
 
       - name: Setup node
         uses: actions/setup-node@8c91899e586c5b171469028077307d293428b516 # tag=v3
@@ -305,7 +305,7 @@ jobs:
           - '18'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # tag=v3
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
 
       - name: Setup node
         uses: actions/setup-node@8c91899e586c5b171469028077307d293428b516 # tag=v3
@@ -349,7 +349,7 @@ jobs:
           - '18'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # tag=v3
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
 
       - name: Setup node
         uses: actions/setup-node@8c91899e586c5b171469028077307d293428b516 # tag=v3
@@ -397,7 +397,7 @@ jobs:
     steps:
       - run: docker run --rm --privileged multiarch/qemu-user-static:register --reset
 
-      - uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # tag=v3
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
 
       - name: Download artifacts
         uses: actions/download-artifact@9782bd6a9848b53b110e712e20e42d89988822b7 # tag=v3
@@ -439,7 +439,7 @@ jobs:
     steps:
       - run: docker run --rm --privileged multiarch/qemu-user-static:register --reset
 
-      - uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # tag=v3
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
 
       - name: Download artifacts
         uses: actions/download-artifact@9782bd6a9848b53b110e712e20e42d89988822b7 # tag=v3
@@ -487,7 +487,7 @@ jobs:
     steps:
       - run: docker run --rm --privileged multiarch/qemu-user-static:register --reset
 
-      - uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # tag=v3
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
       - name: Download artifacts
         uses: actions/download-artifact@9782bd6a9848b53b110e712e20e42d89988822b7 # tag=v3
         with:
@@ -535,7 +535,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8 # tag=v3
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
 
       - name: Setup node
         uses: actions/setup-node@8c91899e586c5b171469028077307d293428b516 # tag=v3
